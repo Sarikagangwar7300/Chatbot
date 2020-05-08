@@ -1,0 +1,65 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - name_data
+  - search_provider
+  - inform
+  - thanks
+
+  
+entities:
+  - name
+  - location
+  - occupation
+  
+slots:
+  name:
+   type: text    
+  location:
+   type: unfeaturized
+  occupation: 
+   type: text
+
+responses:
+  utter_greet:
+  - text: "Hii there!!,how are you"
+
+
+  utter_ask_name:
+  - text: "Tell me your name" 
+  - text: "Who are you"
+ 
+  utter_ask_location:
+  - text: "Tell me your location"
+  
+  utter_ask_occupation:
+  - text: "Tell me your occupation"
+  
+  utter_ack:
+  - text: "here is your data : {name} {location} {occupation}"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
